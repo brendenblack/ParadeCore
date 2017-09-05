@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ParadeCore.Dictionaries
+namespace ParadeCore.Domain.Dictionaries
 {
     public class RankDictionary
     {
-        public static (string name, string abbreviation) Lookup(Rank rank, RankModifier modifier = RankModifier.Standard)
+        public static (string name, string abbreviation) Lookup(RankEquivalence rank, RankModifier modifier = RankModifier.Standard)
         {
             switch (rank)
             {
-                case Rank.PrivateRecruit:
+                case RankEquivalence.PrivateRecruit:
                     switch (modifier)
                     {
                         case RankModifier.Navy:
@@ -21,7 +21,7 @@ namespace ParadeCore.Dictionaries
                         default:
                             return ("Private (Recruit)", "Pte(R)");
                     }
-                case Rank.PrivateBasic:
+                case RankEquivalence.PrivateBasic:
                     switch (modifier)
                     {
                         case RankModifier.Navy:
@@ -31,7 +31,7 @@ namespace ParadeCore.Dictionaries
                         default:
                             return ("Private (Basic)", "Pte(B)");
                     }
-                case Rank.Private:
+                case RankEquivalence.Private:
                     switch (modifier)
                     {
                         case RankModifier.Navy:
@@ -45,7 +45,7 @@ namespace ParadeCore.Dictionaries
                         default:
                             return ("Private", "Pte");
                     }
-                case Rank.Corporal:
+                case RankEquivalence.Corporal:
                     switch (modifier)
                     {
                         case RankModifier.Navy:
@@ -55,7 +55,7 @@ namespace ParadeCore.Dictionaries
                         default:
                             return ("Corporal", "Cpl");
                     }
-                case Rank.MasterCorporal:
+                case RankEquivalence.MasterCorporal:
                     switch (modifier)
                     {
                         case RankModifier.Navy:
@@ -65,18 +65,19 @@ namespace ParadeCore.Dictionaries
                         default:
                             return ("Master Corporal", "MCpl");
                     }
-                case Rank.Sergeant:
+                case RankEquivalence.Sergeant:
                     return (modifier == RankModifier.Navy) ? ("Petty Officer 2nd Class", "PO2") : ("Sergeant", "Sgt");
-                case Rank.WarrantOfficer:
+                case RankEquivalence.WarrantOfficer:
                     return (modifier == RankModifier.Navy) ? ("Petty Officer 1st Class", "PO1") : ("Warrant Officer", "WO");
-                case Rank.MasterWarrantOfficer:
+                case RankEquivalence.MasterWarrantOfficer:
                     return (modifier == RankModifier.Navy) ? ("Chief Petty Officer 2nd Class", "CPO2") : ("Master Warrant Officer", "MWO");
-                case Rank.ChiefWarrantOfficer:
+                case RankEquivalence.ChiefWarrantOfficer:
                     return (modifier == RankModifier.Navy) ? ("Chief Petty Officer 1st Class", "CPO1") : ("Chief Warrant Officer", "CWO");
                 default:
                     return ("", "");
             }
             // return (modifier == RankModifier.Navy) ? ("", "") : ("", "");
         }
+
     }
 }

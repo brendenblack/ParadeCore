@@ -1,12 +1,11 @@
-﻿using ParadeCore.Dictionaries;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace ParadeCore.Domain
+namespace ParadeCore.Domain.Models
 {
     public class Member : IEntity
     {
@@ -16,7 +15,7 @@ namespace ParadeCore.Domain
             string serviceNumber,
             string lastName = "",
             string firstName = "",
-            Rank rank = ParadeCore.Rank.PrivateRecruit,
+            RankEquivalence rank = RankEquivalence.PrivateRecruit,
             RankModifier rankModifier = RankModifier.Standard)
         {
             if (string.IsNullOrWhiteSpace(serviceNumber))
@@ -40,9 +39,18 @@ namespace ParadeCore.Domain
         [RegularExpression(@"^[a-zA-Z]\d{8}", ErrorMessage = "Invalid format", ErrorMessageResourceType = typeof(ArgumentException))]
         [Required]
         public string ServiceNumber { get; private set; }
+
         public string LastName { get; set; }
+
         public string FirstName { get; set; }
+
         public string Initials { get; set; }
+
+        public virtual ICollection<AttendanceRecord> AttendanceRecords { get; private set; } = new List<AttendanceRecord>();
+
+        // public virtual ICollection<UnitPosting> Postings { get; private set; } = new HashSet<UnitPosting>();
+
+
 
         public override bool Equals(object obj)
         {

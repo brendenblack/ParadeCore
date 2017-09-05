@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
-using ParadeCore.Domain;
+using ParadeCore.Domain.Models;
 
-namespace ParadeCore.Test
+namespace ParadeCore.Test.Domain
 {
     public class Member_Should
     {

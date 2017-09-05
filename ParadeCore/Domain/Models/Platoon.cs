@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ParadeCore.Domain
+namespace ParadeCore.Domain.Models
 {
-    public interface IEntity
+    public class Platoon : IEntity
     {
-        int Id { get; }
+        public int Id { get; private set; }
     }
 }

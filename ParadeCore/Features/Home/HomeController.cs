@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ParadeCore.Controllers
+namespace ParadeCore.Features.Home
 {
     public class HomeController : Controller
     {

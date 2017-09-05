@@ -5,11 +5,11 @@ using System.Threading.Tasks;
 
 namespace ParadeCore
 {
-    public enum Rank
+    public enum RankEquivalence
     {
-        Civilian = 0,
+        Civilian = -1,
         PrivateRecruit = 0,
-        PrivateBasic,
+        PrivateBasic =1,
         Private,
         Corporal,
         MasterCorporal,
