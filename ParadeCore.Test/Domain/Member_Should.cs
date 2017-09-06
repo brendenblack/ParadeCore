@@ -2,7 +2,7 @@
 using Xunit;
 using ParadeCore.Domain.Models;
 
-namespace ParadeCore.Test.Domain
+namespace ParadeCore.Tests.Domain
 {
     public class Member_Should
     {

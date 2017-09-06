@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Xunit;
 using static ParadeCore.Features.Members.DeleteMember;
 
-namespace ParadeCore.Test.Features.Members
+namespace ParadeCore.Tests.Features.Members
 {
     public class DeleteMember
     {

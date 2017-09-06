@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xunit;
 using static ParadeCore.Features.Members.GetMemberById;
 
-namespace ParadeCore.Test.Features.Members
+namespace ParadeCore.Tests.Features.Members
 {
     public class GetMemberById
     {
@@ -41,7 +41,6 @@ namespace ParadeCore.Test.Features.Members
         {
             private ParadeContext db;
             private Handler handler;
-            private Query message;
 
             private readonly Member member;
             

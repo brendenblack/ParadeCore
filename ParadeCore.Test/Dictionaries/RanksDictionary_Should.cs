@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xunit;
 
-namespace ParadeCore.Test.Dictionaries
+namespace ParadeCore.Tests.Dictionaries
 {
     public class RanksDictionary_Should
     {

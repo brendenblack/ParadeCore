@@ -9,14 +9,13 @@ using System.Threading.Tasks;
 using Xunit;
 using static ParadeCore.Features.Members.GetMembers;
 
-namespace ParadeCore.Test.Features.Members
+namespace ParadeCore.Tests.Features.Members
 {
     public class GetMembers
     {
         public class Handler_Should
         {
             private readonly Handler handler;
-            private readonly ParadeContext db;
             private readonly IEnumerable<Member> AllMembers; 
 
             public Handler_Should()

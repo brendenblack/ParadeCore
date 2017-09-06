@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.26730.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParadeCore", "ParadeCore\ParadeCore.csproj", "{B8351E3B-3286-4E88-83AD-E2D7F687CCF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParadeCore.Test", "ParadeCore.Test\ParadeCore.Test.csproj", "{EBBAE393-B33B-4808-93C6-2962D92C1811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParadeCore.Tests", "ParadeCore.Test\ParadeCore.Tests.csproj", "{EBBAE393-B33B-4808-93C6-2962D92C1811}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
