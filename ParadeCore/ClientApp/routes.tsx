@@ -4,10 +4,11 @@ import { Layout } from './components/Layout';
 import Home from './components/Home';
 import FetchData from './components/FetchData';
 import Counter from './components/Counter';
+import Members from './components/Members';
 
 export const routes = <Layout>
     <Route exact path='/' component={ Home } />
     <Route path='/counter' component={ Counter } />
     <Route path='/fetchdata/:startDateIndex?' component={FetchData} />
-    <Route path='/members' component={Members} />
+    <Route path='/members' component={ Members } />
 </Layout>;
